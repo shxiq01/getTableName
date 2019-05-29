@@ -1,0 +1,14 @@
+.idea/
+*.iml
+*/*/target
+*.jar
+*.war
+*.project
+*.ear
+*.class
+/target
+*.project
+*.settings/*
+*.classpath
+src/main/java/META-INF/
+META-INF/
