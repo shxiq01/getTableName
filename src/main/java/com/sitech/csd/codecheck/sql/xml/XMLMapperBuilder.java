@@ -131,7 +131,11 @@ public class XMLMapperBuilder extends BaseBuilder {
     String[] s2 = sql.split(" ");
     for (int i = 0; i < s2.length; i++) {
       if (!"".equals(s2[i].trim())){
-        stringBuilder.append(s2[i].split("\\(")[0]).append(" ");
+        try {
+          stringBuilder.append(s2[i].equals("(")?"":s2[i].split("\\(")[0]).append(" ");
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
       }
     }
     return stringBuilder.toString();
